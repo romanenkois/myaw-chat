@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  myaw-db-mongo:
+    image: mongo:7
+    volumes:
+      - myaw-db-mongo:/data/db
+
+  myaw-backend-main-service:
+    build: ./main-service
+    depends_on:
+      - myaw-db-mongo
+    ports:
+      - "3010:3000"
+
+  # myaw-backend-ws-service:
+  #   build: ./ws-service
+  #   ports:
+  #     - "8080:8080"
+
+  myaw-frontend-client:
+    build: ./myaw-client
+    ports:
+      - "4200:4200"
+    depends_on:
+      - myaw-backend-main-service
+
+volumes:
+  myaw-db-mongo:
