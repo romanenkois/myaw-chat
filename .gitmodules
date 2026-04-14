@@ -1,6 +1,9 @@
 [submodule "myaw-frontend"]
 	path = myaw-frontend
 	url = ./myaw-frontend
+	branch = master
+
 [submodule "myaw-main-api"]
 	path = myaw-main-api
 	url = ./myaw-main-api
+	branch = master
