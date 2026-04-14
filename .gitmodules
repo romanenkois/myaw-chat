@@ -1,0 +1,6 @@
+[submodule "myaw-frontend"]
+	path = myaw-frontend
+	url = ./myaw-frontend
+[submodule "myaw-main-api"]
+	path = myaw-main-api
+	url = ./myaw-main-api
