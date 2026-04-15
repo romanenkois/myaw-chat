@@ -1,0 +1,13 @@
+FROM node:lts-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
+# Source is mounted as a volume at runtime — no COPY needed
+# docker-compose mounts ./myaw-frontend → /app
+
+EXPOSE 4200
+
+CMD ["npx", "nx", "serve", "client", "--host", "0.0.0.0", "--port", "4200"]

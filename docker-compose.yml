@@ -1,27 +1,50 @@
-version: "3.9"
-
 services:
+  myaw-nginx:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - myaw-backend-main-service
+      - myaw-frontend-client
+      - myaw-frontend-admin
+
   myaw-db-mongo:
     image: mongo:7
     volumes:
       - myaw-db-mongo:/data/db
 
   myaw-backend-main-service:
-    build: ./main-service
+    build:
+      context: ./myaw-main-api
+      dockerfile: ../docker/backend-main-api/Dockerfile
     depends_on:
       - myaw-db-mongo
     ports:
       - "3010:3000"
 
-  # myaw-backend-ws-service:
-  #   build: ./ws-service
-  #   ports:
-  #     - "8080:8080"
-
   myaw-frontend-client:
-    build: ./myaw-client
+    build:
+      context: ./myaw-frontend
+      dockerfile: ../docker/frontend-client/Dockerfile.dev
+    volumes:
+      - ./myaw-frontend:/app
+      - /app/node_modules
     ports:
       - "4200:4200"
+    depends_on:
+      - myaw-backend-main-service
+
+  myaw-frontend-admin:
+    build:
+      context: ./myaw-frontend
+      dockerfile: ../docker/frontend-admin/Dockerfile.dev
+    volumes:
+      - ./myaw-frontend:/app
+      - /app/node_modules
+    ports:
+      - "4201:4201"
     depends_on:
       - myaw-backend-main-service
 
