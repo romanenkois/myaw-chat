@@ -1,0 +1,33 @@
+{
+  "folders": [
+    {
+      "name": "myaw-chat (root)",
+      "path": "."
+    },
+    {
+      "name": "myaw-main-api",
+      "path": "myaw-main-api"
+    },
+    {
+      "name": "myaw-frontend",
+      "path": "myaw-frontend"
+    },
+    {
+      "name": "myaw-realtime",
+      "path": "myaw-realtime"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.git": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true
+    }
+  },
+  "extensions": {
+    "recommendations": []
+  }
+}

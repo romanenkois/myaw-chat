@@ -7,3 +7,8 @@
 	path = myaw-main-api
 	url = ./myaw-main-api
 	branch = master
+
+[submodule "myaw-realtime"]
+	path = myaw-realtime
+	url = ./myaw-realtime
+	branch = master

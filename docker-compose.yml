@@ -23,6 +23,15 @@ services:
       - myaw-db-mongo
     ports:
       - "3010:3000"
+    
+  myaw-backend-realtime-service:
+    build:
+      context: ./myaw-realtime-api
+      dockerfile: ../docker/backend-realtime/Dockerfile
+    depends_on:
+      - myaw-db-mongo
+    ports:
+      - "3011:3000"
 
   myaw-frontend-client:
     build:
