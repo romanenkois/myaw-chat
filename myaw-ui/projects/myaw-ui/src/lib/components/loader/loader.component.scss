@@ -1,0 +1,80 @@
+:host {
+  --myaw-loader-size: 2.5rem;
+  --myaw-loader-stroke: 3;
+  --myaw-loader-color: currentColor;
+  --myaw-loader-track-color: color-mix(in srgb, currentColor 20%, transparent);
+  --myaw-loader-duration: 900ms;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--myaw-loader-size);
+  height: var(--myaw-loader-size);
+  color: var(--myaw-loader-color);
+}
+
+.myaw-loader__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.myaw-loader__track,
+.myaw-loader__arc {
+  stroke: var(--myaw-loader-track-color);
+  stroke-width: var(--myaw-loader-stroke);
+  stroke-linecap: round;
+}
+
+.myaw-loader__arc {
+  stroke: var(--myaw-loader-color);
+  /* Circumference for r=20 ≈ 125.66 */
+  stroke-dasharray: 90 125.66;
+  stroke-dashoffset: 0;
+  transform-origin: 50% 50%;
+  animation: myaw-loader-spin var(--myaw-loader-duration) linear infinite;
+  transition:
+    stroke-dasharray 320ms ease,
+    stroke-dashoffset 320ms ease;
+}
+
+.myaw-loader__check {
+  stroke: var(--myaw-loader-color);
+  stroke-width: var(--myaw-loader-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset 280ms ease 180ms;
+}
+
+:host(.is-finished) .myaw-loader__arc {
+  animation: none;
+  stroke-dasharray: 125.66 125.66;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+}
+
+:host(.is-finished) .myaw-loader__check {
+  stroke-dashoffset: 0;
+}
+
+@keyframes myaw-loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .myaw-loader__arc {
+    animation-duration: 2400ms;
+  }
+
+  .myaw-loader__check {
+    transition-duration: 0ms;
+    transition-delay: 0ms;
+  }
+}
