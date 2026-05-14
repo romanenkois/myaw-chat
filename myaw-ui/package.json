@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "pack:lib": "npm run build && npm pack ./dist/myaw-ui",
+    "release": "npm run build && npm publish ./dist/myaw-ui --access public"
   },
   "private": true,
   "packageManager": "npm@11.11.0",

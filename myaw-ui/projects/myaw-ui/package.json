@@ -1,6 +1,25 @@
 {
   "name": "@myaw/ui",
   "version": "0.0.1",
+  "description": "Angular UI component library for the myaw-chat project.",
+  "license": "MIT",
+  "author": "Illya Romanenko <romanenkoisnot@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanenkois/myaw-chat.git",
+    "directory": "myaw-ui"
+  },
+  "homepage": "https://github.com/romanenkois/myaw-chat#readme",
+  "bugs": {
+    "url": "https://github.com/romanenkois/myaw-chat/issues"
+  },
+  "keywords": [
+    "angular",
+    "ui",
+    "components",
+    "library",
+    "myaw"
+  ],
   "peerDependencies": {
     "@angular/common": "^21.2.0",
     "@angular/core": "^21.2.0"

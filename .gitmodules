@@ -12,3 +12,14 @@
 	path = myaw-realtime
 	url = ./myaw-realtime
 	branch = master
+	
+[submodule "myaw-ui"]
+	path = myaw-ui
+	url = ./myaw-ui
+	branch = master
+	
+[submodule "myaw-cli"]
+	path = myaw-cli
+	url = ./myaw-cli
+	branch = master
+	
