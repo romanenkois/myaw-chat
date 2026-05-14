@@ -1,13 +1,10 @@
 import { Box, Text } from "ink";
 import { colors } from "../colors";
 
-const LOGO = `
-▄▄▄▄    ▄▄▄▄    ▄▄▄▄    ▄▄▄▄
-████    ████    ████    ████
+const LOGO = `    ▄▄▄▄            ▄▄▄▄
     ████            ████
-    ▀▀▀▀            ▀▀▀▀
-
-
+████    ████    ████    ████
+▀▀▀▀    ▀▀▀▀    ▀▀▀▀    ▀▀▀▀
     `;
 
 export function Header() {
@@ -16,7 +13,7 @@ export function Header() {
       <Box marginRight={2}>
         <Text color={colors.primary}>{LOGO}</Text>
       </Box>
-      <Box alignItems="center">
+      <Box>
         <Text bold color={colors.text}>
           tynka chat cli
         </Text>

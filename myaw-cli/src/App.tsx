@@ -1,34 +1,36 @@
-import { useEffect, useState } from "react";
-import { Box, Text, useApp, useInput, useWindowSize } from "ink";
-import { Home } from "./ui/pages";
-import { Header } from "./ui/components";
+import { Box, Text, useWindowSize } from "ink";
+import { Home, Statuses, Consoles } from "./ui/pages";
+import { Header, Tabs, Footer } from "./ui/components";
 import { colors } from "./ui/colors";
+import { TabsProvider, useTabs, type Tab } from "./ui/state";
+
+const PAGES: Record<Tab, () => React.ReactElement> = {
+  home: Home,
+  statuses: Statuses,
+  consoles: Consoles,
+};
 
 export function App() {
-  const { exit } = useApp();
+  return (
+    <TabsProvider>
+      <AppShell />
+    </TabsProvider>
+  );
+}
+
+function AppShell() {
   const { rows, columns } = useWindowSize();
-  const [confirmExit, setConfirmExit] = useState(false);
+  const { current } = useTabs();
 
-  useInput((_input, key) => {
-    if (key.escape) {
-      if (confirmExit) {
-        exit();
-      } else {
-        setConfirmExit(true);
-      }
-    }
-  });
-
-  useEffect(() => {
-    if (!confirmExit) return;
-    const timer = setTimeout(() => setConfirmExit(false), 2000);
-    return () => clearTimeout(timer);
-  }, [confirmExit]);
+  const Page = PAGES[current];
 
   return (
     <Box flexDirection="column" height={rows} width={columns} padding={1}>
       <Box>
         <Header />
+      </Box>
+      <Box marginTop={1}>
+        <Tabs />
       </Box>
       <Box>
         <Text color={colors.border}>
@@ -36,19 +38,9 @@ export function App() {
         </Text>
       </Box>
       <Box flexGrow={1} marginTop={1}>
-        <Home />
+        <Page />
       </Box>
-      <Box>
-        <Text backgroundColor={colors.danger} color={colors.bgInverse}>
-          {" "}
-          Exit{" "}
-        </Text>
-        <Text dimColor>
-          {confirmExit
-            ? " (press Escape again to confirm)"
-            : " (press Escape twice)"}
-        </Text>
-      </Box>
+      <Footer />
     </Box>
   );
 }
