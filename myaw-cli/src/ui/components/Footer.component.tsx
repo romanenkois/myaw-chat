@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Box, Text, useApp, useInput } from 'ink';
-import { colors } from '../colors';
+import { colors } from '@styles';
 
 export function Footer() {
   const { exit } = useApp();

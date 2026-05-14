@@ -1,5 +1,5 @@
 import { Box, Text } from "ink";
-import { colors } from "../colors";
+import { colors } from "@styles";
 
 const LOGO = `    ▄▄▄▄            ▄▄▄▄
     ████            ████

@@ -1,8 +1,8 @@
-import { Box, Text, useWindowSize } from "ink";
-import { Home, Statuses, Consoles } from "./ui/pages";
-import { Header, Tabs, Footer } from "./ui/components";
-import { colors } from "./ui/colors";
-import { TabsProvider, useTabs, type Tab } from "./ui/state";
+import { Box, Text, useWindowSize } from 'ink';
+import { Home, Statuses, Consoles } from '@pages';
+import { Header, Tabs, Footer } from '@components';
+import { colors } from '@styles';
+import { TabsProvider, useTabs, type Tab } from '@ui-states';
 
 const PAGES: Record<Tab, () => React.ReactElement> = {
   home: Home,
@@ -34,7 +34,7 @@ function AppShell() {
       </Box>
       <Box>
         <Text color={colors.border}>
-          {"─".repeat(Math.max(0, columns - 2))}
+          {'─'.repeat(Math.max(0, columns - 2))}
         </Text>
       </Box>
       <Box flexGrow={1} marginTop={1}>

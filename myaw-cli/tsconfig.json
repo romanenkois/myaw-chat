@@ -14,6 +14,22 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
+    "ignoreDeprecations": "6.0",
+
+    // Path aliases
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["ui/components/index.ts"],
+      "@components/*": ["ui/components/*"],
+      "@pages": ["ui/pages/index.ts"],
+      "@pages/*": ["ui/pages/*"],
+      "@ui-states": ["ui/state/index.ts"],
+      "@ui-states/*": ["ui/state/*"],
+      "@styles": ["ui/styles/index.ts"],
+      "@styles/*": ["ui/styles/*"],
+      "@services": ["core/services/index.ts"],
+      "@services/*": ["core/services/*"]
+    },
 
     // Best practices
     "strict": true,

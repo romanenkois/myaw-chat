@@ -1,6 +1,6 @@
 import { Box, Text, useInput } from 'ink';
-import { colors } from '../colors';
-import { TABS, useTabs } from '../state';
+import { colors } from '@styles';
+import { TABS, useTabs } from '@ui-states';
 
 export function Tabs() {
   const { current, next, prev } = useTabs();
