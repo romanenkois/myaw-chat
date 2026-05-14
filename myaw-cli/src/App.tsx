@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Box, Text, useApp, useInput, useWindowSize } from "ink";
 import { Home } from "./ui/pages";
 import { Header } from "./ui/components";
+import { colors } from "./ui/colors";
 
 export function App() {
   const { exit } = useApp();
@@ -30,13 +31,15 @@ export function App() {
         <Header />
       </Box>
       <Box>
-        <Text>{'─'.repeat(Math.max(0, columns - 2))}</Text>
+        <Text color={colors.border}>
+          {"─".repeat(Math.max(0, columns - 2))}
+        </Text>
       </Box>
       <Box flexGrow={1} marginTop={1}>
         <Home />
       </Box>
       <Box>
-        <Text backgroundColor="red" color="white">
+        <Text backgroundColor={colors.danger} color={colors.bgInverse}>
           {" "}
           Exit{" "}
         </Text>
