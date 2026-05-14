@@ -1,37 +1,42 @@
 {
   "folders": [
     {
-      "name": "myaw-chat (root)",
-      "path": "."
+      "name": "ROOT",
+      "path": ".",
     },
     {
       "name": "myaw-main-api",
-      "path": "myaw-main-api"
-    },
-    {
-      "name": "myaw-frontend",
-      "path": "myaw-frontend"
+      "path": "myaw-main-api",
     },
     {
       "name": "myaw-realtime",
-      "path": "myaw-realtime"
+      "path": "myaw-realtime",
+    },
+    {
+      "name": "myaw-frontend",
+      "path": "myaw-frontend",
+    },
+    {
+      "name": "myaw-ui",
+      "path": "myaw-ui",
     },
     {
       "name": "myaw-cli",
-      "path": "myaw-cli"
-    }
+      "path": "myaw-cli",
+    },
   ],
   "settings": {
     "files.exclude": {
       "**/node_modules": true,
-      "**/.git": true
+      "**/.git": true,
     },
     "search.exclude": {
       "**/node_modules": true,
-      "**/dist": true
-    }
+      "**/.git": true,
+      "**/dist": true,
+    },
   },
   "extensions": {
-    "recommendations": []
-  }
+    "recommendations": [],
+  },
 }
