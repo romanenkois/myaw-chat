@@ -1,6 +1,6 @@
 [submodule "myaw-frontend"]
 	path = myaw-frontend
-	url = ./myaw-frontend
+	url = https://github.com/romanenkois/myaw-frontend.git
 	branch = master
 
 [submodule "myaw-main-api"]
@@ -20,6 +20,6 @@
 	
 [submodule "myaw-cli"]
 	path = myaw-cli
-	url = ./myaw-cli
+	url = https://github.com/romanenkois/myaw-cli.git
 	branch = master
 	
