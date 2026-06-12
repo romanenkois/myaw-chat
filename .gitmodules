@@ -12,7 +12,7 @@
 	path = myaw-realtime
 	url = ./myaw-realtime
 	branch = master
-	
+
 [submodule "myaw-ui"]
 	path = myaw-ui
 	url = ./myaw-ui
@@ -23,3 +23,6 @@
 	url = https://github.com/romanenkois/myaw-cli.git
 	branch = master
 	
+[submodule "myaw-backend"]
+	path = myaw-backend
+	url = ./myaw-backend

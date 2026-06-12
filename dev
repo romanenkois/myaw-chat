@@ -1,3 +1,5 @@
 #!/bin/bash
 
 sudo docker compose start
+
+npx nx generate @nx/angular:library --name=realtime --directory=libs/core/realtime --standalone --buildable

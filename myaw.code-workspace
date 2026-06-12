@@ -13,6 +13,10 @@
       "path": "myaw-realtime",
     },
     {
+      "name": "myaw-backend",
+      "path": "myaw-backend",
+    },
+    {
       "name": "myaw-frontend",
       "path": "myaw-frontend",
     },
