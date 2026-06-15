@@ -26,6 +26,9 @@
 [submodule "myaw-backend"]
 	path = myaw-backend
 	url = ./myaw-backend
+	branch = master
+	
 [submodule "myaw-contracts"]
 	path = myaw-contracts
 	url = ./myaw-contracts
+	branch = master
