@@ -1,0 +1,14 @@
+{
+  "nxConsole.nxWorkspacePath": "myaw-frontend",
+  "files.exclude": {
+    "**/*-e2e": true
+  },
+  "search.exclude": {
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "github.copilot.chat.agent.autoApprove": {
+    "read": true,
+    "workspace": true
+  }
+}

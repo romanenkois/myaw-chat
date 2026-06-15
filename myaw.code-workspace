@@ -17,6 +17,10 @@
       "path": "myaw-backend",
     },
     {
+      "name": "myaw-contracts",
+      "path": "myaw-contracts",
+    },
+    {
       "name": "myaw-frontend",
       "path": "myaw-frontend",
     },
