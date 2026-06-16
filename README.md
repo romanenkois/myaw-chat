@@ -11,6 +11,7 @@ This repo links all the used repositories of myaw chat services, libs and tools,
 
 ### Private
 
-- **myaw-backend** - Main backend service, used as an REST API
-- **myaw-realtime** - Realtime backend service, used for WebSocket connections
+- **myaw-backend** - Backend NestJS NX monorepo
 - **myaw-ui** - Perspective custom UI library, that is planned to be separated from main frontend monorepo
+- **myaw-main-api** - to be deprecated, express main api service
+- **myaw-realtime** - to be deprecated, sockets io realtime service
