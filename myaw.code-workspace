@@ -8,30 +8,30 @@
       "name": "myaw-main-api",
       "path": "myaw-main-api",
     },
-    {
-      "name": "myaw-realtime",
-      "path": "myaw-realtime",
-    },
+    // {
+    //   "name": "myaw-realtime",
+    //   "path": "myaw-realtime",
+    // },
     {
       "name": "myaw-backend",
       "path": "myaw-backend",
-    },
-    {
-      "name": "myaw-contracts",
-      "path": "myaw-contracts",
     },
     {
       "name": "myaw-frontend",
       "path": "myaw-frontend",
     },
     {
-      "name": "myaw-ui",
-      "path": "myaw-ui",
+      "name": "myaw-contracts",
+      "path": "myaw-contracts",
     },
-    {
-      "name": "myaw-cli",
-      "path": "myaw-cli",
-    },
+    // {
+    //   "name": "myaw-ui",
+    //   "path": "myaw-ui",
+    // },
+    // {
+    //   "name": "myaw-cli",
+    //   "path": "myaw-cli",
+    // },
   ],
   "settings": {
     "files.exclude": {
@@ -43,6 +43,10 @@
       "**/.git": true,
       "**/dist": true,
     },
+    "terminal.integrated.enablePersistentSessions": true,
+    "terminal.integrated.scrollback": 50000,
+    // "terminal.integrated.persistentSessionScrollback": 50000,
+    // "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
   },
   "extensions": {
     "recommendations": [],
