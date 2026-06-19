@@ -30,5 +30,5 @@
 	
 [submodule "myaw-contracts"]
 	path = myaw-contracts
-	url = ./myaw-contracts
+	url = https://github.com/romanenkois/myaw-contracts.git
 	branch = master
