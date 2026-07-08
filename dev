@@ -1,5 +1,10 @@
-#!/bin/bash
+#not #!/bin/bash
 
 sudo docker compose start
 
 npx nx generate @nx/angular:library --name=realtime --directory=libs/core/realtime --standalone --buildable
+
+git submodule update
+
+git submodule sync --recursive
+git submodule update --init --recursive
